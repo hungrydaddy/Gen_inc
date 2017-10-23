@@ -1,0 +1,28 @@
+
+.SubIcons {
+  min-height: 48px;
+  width : 100%;
+}
+.SubIcons md-input-container:not(.md-input-invalid) > md-icon.email {
+  color: green; }
+.SubIcons md-input-container.md-input-invalid > md-icon.email{
+  color: red; }
+
+.errmessage{
+  color:red;
+}
+
+/*Overwrite full uppcase setting option*/
+.md-button {
+    text-transform: none !important;
+}
+
+.md-button.md-approve{
+  color: white;
+  background-color: green;
+}
+
+.md-button.md-approve:not([disabled]):hover{
+  color: white;
+  background-color: DarkGreen ;
+}

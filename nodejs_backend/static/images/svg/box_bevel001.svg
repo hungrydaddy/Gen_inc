@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+    viewBox="0 0 170 90">
+<defs>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       id="bevel">
+      <feGaussianBlur
+         result="result1"
+         in="SourceAlpha"
+         stdDeviation="2.2"
+         id="feGaussianBlur4941" />
+      <feSpecularLighting
+         result="result0"
+         specularExponent="18.1"
+         specularConstant="2"
+         surfaceScale="5"
+         id="feSpecularLighting4943">
+        <feDistantLight
+           azimuth="225"
+           elevation="24"
+           id="feDistantLight4945" />
+      </feSpecularLighting>
+      <feComposite
+         result="result6"
+         operator="in"
+         in2="SourceAlpha"
+         id="feComposite4947" />
+      <feMorphology
+         radius="5.7"
+         operator="dilate"
+         id="feMorphology4949" />
+      <feGaussianBlur
+         result="result11"
+         stdDeviation="5.7"
+         id="feGaussianBlur4951" />
+      <feDiffuseLighting
+         surfaceScale="5"
+         result="result3"
+         diffuseConstant="2"
+         in="result1"
+         id="feDiffuseLighting4953">
+        <feDistantLight
+           elevation="25"
+           azimuth="225"
+           id="feDistantLight4955" />
+      </feDiffuseLighting>
+      <feBlend
+         result="result7"
+         mode="multiply"
+         in="result3"
+         in2="SourceGraphic"
+         id="feBlend4957" />
+      <feComposite
+         in="result7"
+         operator="in"
+         in2="SourceAlpha"
+         result="result91"
+         id="feComposite4959" />
+      <feBlend
+         result="result9"
+         mode="lighten"
+         in="result6"
+         in2="result91"
+         id="feBlend4961" />
+      <feComposite
+         in="result11"
+         in2="result9"
+         id="feComposite4963" />
+    </filter>
+</defs>
+
+<rect
+ style="fill:#eee;fill-opacity:0.5;filter:url(#bevel)"
+ id="rect4162"
+ width="170"
+ height="90"
+ x="0"
+ y="0" ry="20"/>
+
+</svg>

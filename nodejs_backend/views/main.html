@@ -1,0 +1,55 @@
+<meta name="viewport" content="width=device-width">
+<head>
+    <title>Sunny Days</title>
+
+    <!-- Angular JS Setup -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script> <!- Angular JS, google CDN ->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-app="SunnyDayApp" ng-controller="main_controller">
+  <!-- Main header -->
+  <div class="main_header" layout="row" ng-style="{'height': header_height_main.value + '%','top':header_top_main.value  + '%'}"
+    layout-align="center center" ng-click="SetActiveToSearch()">
+      <img class="lobster_text" src="images/svg/lobster_trans.svg" />
+  </div>
+  <div class="main_header" layout="row" ng-style="{'height': header_height_days_sel.value  + '%','top':header_top_days_sel.value  + '%'}"
+    layout-align="center center" ng-click="SetActiveToDaySelect()">
+      Days selection
+  </div>
+  <div class="main_header" layout="row" ng-style="{'height': header_height_period_sel.value + '%','top':header_top_period_sel.value  + '%'}"
+    layout-align="center center" ng-click="SetActiveToPeriodSelect()">
+      Period Selection
+  </div>
+  <div class="main_header" layout="row" ng-style="{'height': header_height_notification_setting.value + '%','top':header_top_notification_setting.value + '%'}"
+    layout-align="center center" ng-click="SetActiveToNotificationSettings()">
+      Notification Settings
+  </div>
+  <div class="main_header" layout="row" ng-style="{'height': header_height_subscribe.value + '%','top':header_top_subscribe.value + '%'}"
+    layout-align="center center" ng-click="SetActiveToSubscribe()">
+      Keep me updated!
+  </div>
+  <div ng-view class="main_display" ng-style="{'height': height_display.value + '%','top':top_display.value + '%'}"
+    layout="row" ></div>
+
+</body>
+<!-- Angular Material Setup -->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-aria.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-messages.js"></script>
+<!-- Angular Material Library -->
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.js"></script>
+<!-- Angular Material CSS -->
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.css">
+
+<!-- Loading data -->
+<script src="js/data/search_list.js"></script>
+<script src="js/data/weather_station.js"></script>
+<!-- invoke all the js -->
+<script src="js/main.js"></script>
+<script src="js/search.js"></script>
+<script src="js/days_sel.js"></script>
+<script src="js/period_sel.js"></script>
+<script src="js/notification_setting.js"></script>
+<script src="js/subscribe.js"></script>

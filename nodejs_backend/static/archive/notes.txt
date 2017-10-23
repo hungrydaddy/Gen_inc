@@ -1,0 +1,75 @@
+Files:
+
+index.html	Sunny Days including four page-like divs
+SD014.css	CSS file for styling Sunny Days index.html (formerly BT014.css)
+MH014.js	Menu Header javascript file, for handling menu highlighting and shrink on scroll
+SB004.js	Search Box javascript file
+BU001.js	Buttons javascript file
+
+
+
+Menu Header javascript MH---.js:
+________________________________
+
+[ Animating the Menu Header requires the following:
+ HTML
+   A header div:
+   <div class="header">...</div>
+
+    A set of menu items to highlight:
+    <div class="menu_item1">...</div>
+
+    A set of large page divs to keep track of user position:
+    <div class="page1">...</div>
+
+ CSS
+    A "scrollTopHeader" class styling (should be larger in height),
+    which is activated when the view is near the top of the page.  ]
+
+
+
+
+Search Box javascript SB---.js:
+_______________________________
+
+The Search Box looks for and runs the following functions:
+
+onTextChange()   - this runs whenever the search text changes
+
+onSearchSelect(option_text) - this runs when the user selects an option
+
+
+[ Making a search box requires the following:
+
+ Javascript:
+    A list called "search_list".
+    search_list = ["dog", "cat", "cow", "chicken"]
+
+ HTML
+    A container div:
+    <div class="search_container">...</div>
+    A text area:
+    <textarea class="search_box">...</textarea>    ]
+
+[ Minimum code to make it work:]
+
+<script src="SB004.js"></script>
+<script>
+var search_list = ["dog", "cat", "cow", "chicken"]
+</script>
+<html>
+<div class="search_container">
+  <textarea class="search_box"></textarea>
+</div>
+</html>
+
+
+
+Buttons javascript BU---.js:
+____________________________
+
+When the submit button is clicked, this runs the following function:
+
+showDaysGraph(ids)
+
+"ids" is a list of integers, showing which buttons were selected when the submit button was pushed.

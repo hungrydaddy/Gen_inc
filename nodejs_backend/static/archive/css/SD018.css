@@ -1,0 +1,392 @@
+.header {
+    position: fixed;
+    font-size: large;
+    text-align: center;
+    transition: font-size 500ms;
+    height: 50px;
+    transition: height 200ms ease;
+    width: 100%;
+    background-color: #45A5C8;
+    background: linear-gradient(to right, #66d7d1, #6DD5FF);
+}
+
+.scrollTopHeader {
+    font-size: xx-large;
+    height: 100px;
+    width: 100%;
+}
+
+.menu {
+    height: 100%;
+    font-size: medium;
+    transition: height 200ms;
+    width: 600px;
+    position: absolute;
+    left: 55%;
+    top: 0px;
+    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+    text-shadow: none;
+}
+
+.menu_hamburger {
+    position: absolute;
+    visibility: hidden;
+    left: 85%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 90%;
+}
+
+[class*="menu_item"] {
+    width: 18%;
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    *display: inline;
+}
+
+[class*="menu_text"] {
+    font-size: medium;
+    font-family: "Arvo";
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+}
+
+.menu_highlight {
+    background: #B1B9CF;
+    font-size: medium;
+}
+
+.top_left_header {
+    position: relative;
+    height: 100%;
+    width: 25%;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.lobster_text {;
+    height: 100%;
+}
+
+@font_face {
+    font-family: "Lobster";
+    src: url("fonts/Lobser_Regular.ttf");
+}
+
+.top_left_text1{
+    font_family: "Lobster";
+    color: white;
+    transition: font-size 500ms;
+    line-height: 1;
+}
+
+
+.page1_bg_img {
+    position: absolute;
+    width: 100%;
+    min-width: 900px;
+    top: 40px;
+    left: 0px;
+}
+
+.page2_bg_img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-image: url("../images/bitmap/page2bg.jpg");
+}
+
+
+.search_container {
+    font-size: x-large;
+    position: relative;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.search_box {
+    height: 40px;
+    width: 100%;
+    padding-left: 6px;
+
+    -webkit-box-shadow: 0 -2px 2px 0 rgba(199, 199, 199, 0.55), 0 1px 1px 0 #fff, 0 2px 2px 1px #fafafa, 0 2px 4px 0 #b2b2b2 inset, 0 -1px 1px 0 #f2f2f2 inset, 0 15px 15px 0 rgba(41, 41, 41, 0.09) inset;
+    -moz-box-shadow: 0 -2px 2px 0 rgba(199, 199, 199, 0.55), 0 1px 1px 0 #fff, 0 2px 2px 1px #fafafa, 0 2px 4px 0 #b2b2b2 inset, 0 -1px 1px 0 #f2f2f2 inset, 0 15px 15px 0 rgba(41, 41, 41, 0.09) inset;
+    box-shadow: 0 -2px 2px 0 rgba(199, 199, 199, 0.55), 0 1px 1px 0 #fff, 0 2px 2px 1px #fafafa, 0 2px 4px 0 #b2b2b2 inset, 0 -1px 1px 0 #f2f2f2 inset, 0 15px 15px 0 rgba(41, 41, 41, 0.09) inset;
+
+}
+
+.results_frame {
+    border-style: none;
+}
+
+.result_strip {
+    background-color: white;
+    padding-left: 10px;
+}
+
+.search_hover {
+    background-color: #def;
+}
+
+.arrow_box {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 15%;
+    width: 150px;
+    white-space: wrap;
+    color: white;
+    transform: translateY(-50%);
+    font-size: large;
+    outline: 0px solid transparent;
+    opacity: 0;
+    transition: opacity 500ms;
+    cursor: default;
+    pointer-events: none;
+}
+
+.arrow_box:focus {
+    opacity: 1;
+}
+
+.search_box_arrow {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 60%;
+    max-width: 100px;
+    transform: translateY(-50%) rotate(120deg) scale(0.6) scaleX(-1);
+}
+
+.page2 {
+    position: absolute;
+    top: 700px;
+    width: 100%;
+    height: 600px;
+
+
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, rgb(255,224,181), rgb(104,215,209)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, rgb(255,224,181), rgb(104,215,209)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, rgb(255,224,181), rgb(104,215,209)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgb(255,224,181), rgb(104,215,209)); /* Standard syntax */
+    background: -webkit-linear-gradient(left, rgb(255,224,181), rgb(104,215,209));
+    background-image: url("../images/bitmap/page2bg.png");
+    z-index: -1;
+}
+
+.dayButton {
+    position: relative;
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+}
+
+.dayButton > div {
+    position: relative;
+    top: 4px;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.dayButton > img {
+    width: 150px;
+}
+
+.dayButton > img:hover {
+    filter: brightness(3)
+}
+
+.dayButton > img:active {
+    position: relative;
+    top: 1px;
+}
+
+.day_button_select {
+    background: red;
+}
+
+.days_container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%);
+    visibility: hidden;
+}
+
+.days_container > img {
+    width: 15%;
+    min-width: 150px;
+}
+
+.days_submit_button {
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;"
+}
+
+.days_submit_button > img:hover {
+    filter: brightness(3)
+}
+
+.calendar_container {
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    transform: translateX(-50%);
+    width: 200px;
+    height:200px;
+}
+
+.page3 {
+    position: absolute;
+    top: 1300px;
+    width: 100%;
+    height: 600px;
+    background: white;
+    z-index: -1;
+    background-image: url("../images/bitmap/page3bg.jpg");
+}
+
+
+
+[class*="hourElem"] {
+
+    padding-top: 3px;
+
+    text-align: left;
+
+    width: 100%;
+
+    height: 30px;
+
+    background-color: white;
+
+}
+
+
+
+.valid {
+
+    background-color: #F37F34;
+
+}
+
+.page4 {
+    position: absolute;
+    top: 1900px;
+    width: 100%;
+    height: 500px;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, rgb(255,164,79), rgb(248,118,102)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, rgb(255,164,79), rgb(248,118,102)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, rgb(255,164,79), rgb(248,118,102)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgb(255,164,79), rgb(248,118,102)); /* Standard syntax */
+    background-image: url("../images/bitmap/page4bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* text layouts below */
+.text1 {
+    font-size: 20px;
+    margin-top: 250px;
+    text-align: center;
+    position: relative;
+}
+
+
+.text2 {
+    font-size: 25px;
+    text-align: center;
+    top: 40%;
+    position: relative;
+}
+
+
+.text3 {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20%;
+    position: relative;
+}
+
+
+.text4 {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 60%;
+    position: relative;
+}
+
+
+.bt_search {
+    margin-top: 10%;
+    left: 40%;
+    position: relative;
+}
+
+.form-group {
+    margin-top: 20px;
+    position: relative;
+}
+
+
+.list-group {
+    margin-top: 10%;
+    position: relative;
+}
+
+.progress {
+    position: relative;
+    margin-top: 20px;
+
+}
+
+@media screen and (max-width: 460px) {
+    .scrollTopHeader {
+        font-size: large;
+        height: 50px;
+    }
+    .menu {
+        visibility: hidden;
+    }
+    .menu_hamburger {
+        visibility: visible;
+    }
+    .search_container {
+        top: 100px;
+        font-size: medium;
+    }
+    .search_box {
+        height: 25px;
+    }
+    .days_container {
+        top: 160px;
+    }
+    .arrow_box {
+        top: 35%;
+    }
+    .search_box_arrow {
+    top: -60%;
+    left: 10%;
+    transform: translateY(-50%) rotate(10deg) scale(0.6) scaleX(-1);
+    }
+}

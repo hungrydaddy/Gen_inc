@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="css/search.css">
+<div class="search_page" ng-controller="SearchController" layout="row" layout-wrap layout-align="center center">
+          <div class="search_bg_img"></div>
+          <md-autocomplete
+            flex="66"
+            ng-disabled="search_ctrl.isDisabled"
+            md-selected-item="search_ctrl.selectedItem"
+            md-search-text="search_ctrl.searchText"
+            md-items="item in search_ctrl.querySearch(search_ctrl.searchText)"
+            md-item-text="item.display"
+            md-autoselect= 'true'
+            placeholder="Which location are you interested in?"
+            md-selected-item-change = "suburb_selected()"
+            md-autofocus = 'true'
+          >
+          <md-item-template>
+            <span md-highlight-text="search_ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+          </md-item-template>
+          <md-not-found ng-if="search_ctrl.searchText">
+            No states matching "{{search_ctrl.searchText}}" were found.
+          </md-not-found>
+        </md-autocomplete>
+        <!-- <div class="search_container" data-n="10">
+            <input type="text" class="form-control search_box" placeholder="Search..." aria-describedby="basic-addon1">
+        </div> -->
+    <!-- <div class="arrow_box" tabindex="1">
+        <object class="search_box_arrow" type="image/svg+xml" data="images/svg/arrow004.svg"></object>
+        Find sunny days in your area. Enter your suburb here.
+    </div> -->
+</div>

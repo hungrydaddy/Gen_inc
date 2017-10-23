@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+    <title>Sunny Days</title>
+
+
+    <link rel="stylesheet" href="css/SD018.css">
+    <link rel="stylesheet" href="css/DG002.css"><!-Handles the sunny periods graph(css) ->
+    <link rel="stylesheet" href="css/page4.css"><!-Handles the page4 styles(css) ->
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/MH014.js"></script><!-Handles menu-bar highlighting->
+    <script src="js/SB006.js"></script><!-Handles the search-box->
+    <script src="js/BU002.js"></script><!-Handles the day selection->
+    <script src="js/DG002.js"></script><!-Handles the sunny periods graph->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+
+</head>
+
+<script>
+
+window.onload = function() {
+    // If you have any window.onload functions in your javascript files, call them here instead.
+    search_box_onload();
+    day_button_onload();
+    document.getElementsByClassName('arrow_box')[0].focus()
+}
+
+</script>
+
+<body class="container-fluid" ng-app="SubApp">
+    <div class="header desktop_header scrollTopHeader row">
+        <div class="top_left_header">
+            <img class="lobster_text" src="images/svg/lobster_trans.svg" />
+        </div>
+        <div class="menu">
+            <div class="menu_item1"><div class="menu_text1">Search Suburb</div></div>
+            <div class="menu_item2"><div class="menu_text2">Select timeframe</div></div>
+            <div class="menu_item3"><div class="menu_text3">Select Range</div></div>
+            <div class="menu_item4"><div class="menu_text4">Sunny Periods</div></div>
+        </div>
+        <a class="menu_hamburger">
+            <img class="menu_hamburger" src="images/svg/menu_hamburger.svg">
+        </a>
+    </div>
+
+    <div class="page1 row">
+        <div class="col-md-12">
+            <img class="page1_bg_img" src="images/bitmap/twelve_apostles002.jpg">
+            <div class="search_container" data-n="10">
+                <input type="text" class="form-control search_box" placeholder="Search..." aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <div class="arrow_box" tabindex="1">
+            <object class="search_box_arrow" type="image/svg+xml" data="images/svg/arrow004.svg"></object>
+            Find sunny days in your area. Enter your suburb here.
+        </div>
+    </div>
+
+    <div id="page2" class="page2 row">
+        <div class="col-md-6">
+            <div class="col-md-12">
+                <div class="days_container">
+                    <!--This is the button template-->
+                    <div class="dayButton">
+                        <img src="images/svg/day_button001.svg" />
+                        <div class="day_button_text" style="position:absolute; top:165px; width:100%; pointer-events: none;">
+                        </div>
+                    </div>
+                    <!--End button template-->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-12">
+                <text class="text4">select your days</text>
+            </div>
+            <div class="col-md-12">
+                <div class="days_submit_button">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);">see your days</div>
+                    <img width="300px" src="images/svg/box_bevel001.svg" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page3" class="page3 row">
+        <div class="col-md-3"></div>
+        <div class="graph_container col-md-6">
+            <div class="col-md-12 text3">Sunny Periods</div>
+            <div class="row dayGraph" style="display:none;">
+                <div class="col-md-3 day_label"></div>
+                <div class="col-md-3 hourElem1">Morning</div>
+                <div class="col-md-3 hourElem2">Afternoon</div>
+                <div class="col-md-3 hourElem3">Evening</div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+    <div class="page4 row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 row">
+            <div class="col-md-12">
+                <text class="text4" style="top: 50px;">Select Notification Settings: </text>
+            </div>
+            <div class="col-md-6">
+                <div class="notification_button1 buttonTitle">
+                    <text>Once a week</text>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="notification_button2 buttonTitle">
+                    <text>Day before</text>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="notification_button3 buttonTitle">
+                    <text>On the day</text>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="notification_button4 buttonTitle">
+                    <text>On specific time</text>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="buttonNext text4">next</div>
+        </div>
+    </div>
+</body>

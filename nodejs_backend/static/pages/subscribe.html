@@ -1,0 +1,61 @@
+
+<head>
+    <title>Sunny Days</title>
+    <link rel="stylesheet" href="css/subscribe.css"><!-Handles the subscription page styles(css) ->
+</head>
+
+  <div ng-controller="SubCtrl" layout="column" class="SubIcons" layout-padding ng-cloak layout-align="top center" layout-wrap>
+    <!--what will pop up if email sent success -->
+    <div ng-if="stage_request_complete_success" layout="row" layout-sm="column">
+      <md-content flex layout-padding>Email Sent</md-content>
+    </div>
+    <div ng-if="stage_request_complete_success" layout="row" layout-sm="column" layout-align="space-around">
+        <section layout="row" layout-sm="column" layout-align="center center" ng-click="ReturnToMain()" layout-wrap>
+          <md-button class="md-raised md-approve">Return to main page</md-button>
+        </section>
+    </div>
+    <!--what will pop up if email sent failed -->
+    <div ng-if="stage_request_complete_failure" layout="row" layout-sm="column" >
+      <md-content flex layout-padding>Email Sent unsuccessful</md-content>
+    </div>
+    <div ng-if="stage_request_complete_failure" layout="row" layout-sm="column" layout-align="space-around">
+        <section layout="row" layout-sm="column" layout-align="center center" ng-click="subRety()" layout-wrap>
+          <md-button class="md-raised md-warn">Retry</md-button>
+        </section>
+        <section layout="row" layout-sm="column" layout-align="center center" ng-click="ReturnToMain()" layout-wrap>
+            <md-button class="md-raised md-warn">Return to main page</md-button>
+        </section>
+    </div>
+    <!--what will pop up when sending a email -->
+    <div ng-if="stage_request_sent" layout="row" layout-sm="column" layout-align="space-around">
+        <md-progress-circular md-mode="indeterminate" md-diameter="92px">></md-progress-circular>
+    </div>
+    <div ng-if="stage_request_sent" layout="row" layout-sm="column">
+      <md-content flex layout-padding>Sending Verification Email</md-content>
+    </div>
+    <!--input stage -->
+      <form name = "SubForm">
+            <md-input-container class="md-block" ng-if="stage_input">
+              <md-icon md-svg-src="images/svg/email.svg" class="email"></md-icon>
+              <input name="emailinput" ng-model="user.email" type="email" placeholder="Email (required)" ng-required="true">
+              <div ng-if="showEmalErr"  ng-show="SubForm.emailinput.$invalid" class = "errmessage">
+                Invlid Email Address
+              </div>
+            </md-input-container>
+        <div ng-if="stage_input" class="inset"  layout="row" layout-sm="column" layout-xs="column"  ng-cloak>
+            <md-switch ng-model="SubSelect.email" aria-label="Switch 1">
+              Email Notification
+            </md-switch>
+            <md-switch ng-model="SubSelect.device" aria-label="Switch 2">
+              Device Notification
+            </md-switch>
+        </div>
+        <div ng-if="showSelErr && stage_input" class = "errmessage">
+          At least one method is required*
+        </div>
+      </form>
+      <section ng-if="stage_input" layout="row" layout-sm="column" layout-align="center center" ng-click="subscribe()" layout-wrap>
+        <md-button class="md-raised md-warn">Notify me on changes!</md-button>
+      </section>
+
+  </div>
